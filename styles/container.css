@@ -1,0 +1,12 @@
+/**
+ * 이 파일은 iModule 메세지모듈의 일부입니다. (https://www.imodules.io)
+ *
+ * 메세지 모듈이 컨테이너로 호출되었을때 스타일시트
+ * 
+ * @file /modules/message/templets/styles/container.css
+ * @author Arzz (arzz@arzz.com)
+ * @license MIT License
+ * @version 3.0.0
+ * @modified 2019. 4. 21.
+ */
+div[data-module=message] {width:100%; height:100%; padding:0; margin:0;}

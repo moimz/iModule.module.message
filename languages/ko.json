@@ -1,0 +1,13 @@
+{
+	"context":{
+		"box":"메시지박스"
+	},
+	"admin":{
+		"configs":{
+			"form":{
+				"default_setting":"모듈기본설정",
+				"templet":"템플릿"
+			}
+		}
+	}
+}

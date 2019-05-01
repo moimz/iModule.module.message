@@ -1,0 +1,156 @@
+/**
+ * 이 파일은 iModule 메세지모듈의 일부입니다. (https://www.imodules.io)
+ *
+ * 기본템플릿 스타일시트
+ * 
+ * @file /modules/message/templets/default/styles/style.css
+ * @author Arzz (arzz@arzz.com)
+ * @license MIT License
+ * @version 3.0.0
+ * @modified 2019. 4. 21.
+ */
+div[data-module=message][data-context=box] {border:1px solid #e5e5e5; font-size:0; width:100%; height:100%; box-sizing:border-box; position:relative; padding:0; margin:0;}
+div[data-module=message][data-context=box] form > input[type=file] {display:none;}
+div[data-module=message][data-context=box] form {width:100%; height:100%;}
+div[data-module=message][data-context=box] aside {width:400px; height:100%; border-right:1px solid #e5e5e5; position:absolute; top:0; left:0; z-index:10; background:#fff; user-select:none; -ms-user-select:none; -moz-user-select:none; -webkit-user-select:none;}
+div[data-module=message][data-context=box] aside > h4 {border-bottom:1px solid #e5e5e5; width:100%; height:50px; line-height:50px; font-size:14px; font-weight:bold; text-align:center; position:relative;}
+div[data-module=message][data-context=box] aside > h4 > button {width:40px; height:40px; margin:5px; color:#2196F3; background:transparent; border:0; position:absolute; top:0; z-index:1; font-size:24px; cursor:pointer;}
+div[data-module=message][data-context=box] aside > h4 > button > i {width:40px; height:40px; line-height:40px;}
+div[data-module=message][data-context=box] aside > h4 > button[data-action=setting] {left:0;}
+div[data-module=message][data-context=box] aside > h4 > button[data-action=new] {right:0;}
+div[data-module=message][data-context=box] aside > h4 > button[data-action=showbox] {right:0; color:#222; display:none;}
+div[data-module=message][data-context=box] div[data-role=disabled] {display:none; position:absolute; background:rgba(0,0,0,0.3); width:calc(100% + 2px); height:calc(100% + 2px); z-index:5; top:-1px; left:-1px;}
+
+div[data-module=message][data-context=box] section {width:100%; height:100%; box-sizing:border-box; padding-left:400px; position:relative;}
+div[data-module=message][data-context=box] section > h5 {border-bottom:1px solid #e5e5e5; width:100%; height:50px; text-align:center; position:relative; user-select:none; -ms-user-select:none; -moz-user-select:none; -webkit-user-select:none;}
+div[data-module=message][data-context=box] section > h5 > button[data-action] {position:absolute; margin:5px; width:40px; height:40px; font-size:24px; border:0; background:transparent; top:0; color:#2196F3; cursor:pointer; z-index:1;}
+div[data-module=message][data-context=box] section > h5 > button[data-action] > i {width:40px; height:40px; line-height:40px; text-align:center;}
+div[data-module=message][data-context=box] section > h5 > button[data-action=showbox] {display:none; left:0; color:#222;}
+div[data-module=message][data-context=box] section > h5 > button[data-action=new] {right:0; display:none;}
+
+div[data-module=message][data-context=box] div[data-role=boxes] {width:100%; height:calc(100% - 51px); overflow-x:hidden; overflow-y:scroll; -webkit-overflow-scrolling:touch;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=searchbox] {padding:10px; box-sizing:border-box; position:relative;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=searchbox] > div[data-role=input] {min-height:30px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=searchbox] > div[data-role=input] > input {height:30px; line-height:20px; padding:5px 45px 5px 15px; background:#f4f4f4; border:0; border-radius:15px; font-size:14px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=searchbox] > button {position:absolute; top:10px; right:15px; width:30px; height:30px; background:transparent; font-size:16px; color:#666; border:0; cursor:pointer; line-height:26px; text-align:center;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=loading] {width:100%; height:calc(100% - 51px); position:relative;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=loading] > i {position:absolute; width:40px; height:40px; top:calc(50% - 20px); left:calc(50% - 20px); font-size:24px; color:#666; text-align:center; line-height:40px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] {width:100%; height:60px; background:transparent; cursor:pointer; position:relative; box-sizing:border-box; padding:8px 10px 8px 70px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] + div[data-role=loading] {height:100px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box]:hover {background:#f4f4f4;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo {display:block; width:48px; height:48px; background-image:url(../../../../member/images/nophoto.png); position:absolute; top:6px; left:10px; background-size:cover; background-position:50% 50%; border-radius:50%; box-sizing:border-box; border:1px solid #ccc; overflow:hidden;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall] {background:#fff; width:100%; height:100%; position:relative;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall] > i {display:block; background-size:cover; background-position:50% 50%; box-sizing:border-box; position:absolute; width:50%; height:50%;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-2] > i:nth-child(1) {height:100%; top:0; left:0;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-3] > i:nth-child(1) {height:100%; top:0; left:0;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-4] > i:nth-child(1) {height:calc(50% - 1px);}
+
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-2] > i:nth-child(2) {height:100%; top:0; right:0;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-3] > i:nth-child(2) {height:50%; top:0; right:0;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-3] > i:nth-child(3) {bottom:0; right:0;}
+
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-4] > i:nth-child(2) {height:50%; bottom:0; left:0;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-4] > i:nth-child(3) {height:50%; top:0; right:0;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-4] > i:nth-child(4) {bottom:0; right:0;}
+
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > b {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:14px; height:25px; line-height:25px; color:#222;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > b > time {color:#666; float:right; font-size:12px; font-weight:normal; margin-left:10px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:14px; height:18px; line-height:18px; color:#666; font-size:12px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > label {min-width:18px; height:18px; border-radius:9px; font-family:Roboto; color:#fff; line-height:18px; float:right; background:#2196F3; padding:0px 5px; box-sizing:border-box; display:none; margin-left:5px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small.new {color:#222 !important; font-weight:bold;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small.new > label {display:block;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box].selected {background:#f4f4f4;}
+
+div[data-module=message][data-context=box] div[data-role=title] {display:none; position:absolute; top:0; left:0; width:100%; height:50px; font-size:14px; line-height:50px;}
+div[data-module=message][data-context=box] div[data-role=receiver] {display:none; position:absolute; top:0; left:0; padding:10px; width:100%; height:51px; border-bottom:1px solid #e5e5e5; font-size:0; box-sizing:border-box; text-align:left; font-weight:normal;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div {display:inline-block; height:30px; vertical-align:middle;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div.label {color:#666; font-size:14px; line-height:30px; vertical-align:middle;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=user] {background:#2196F3; color:#fff; font-size:14px; padding:0px 8px; height:30px; line-height:30px; border-radius:3px; margin-left:5px; cursor:pointer;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=user]:focus {background:#0D47A1; outline:none;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] {width:150px; min-height:30px; height:30px; position:relative; vertical-align:middle; background:blue;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > input {width:100%; height:30px; padding:5px; line-height:20px; color:#666; font-size:14px; box-sizing:border-box; border:0;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul {position:absolute; top:35px; left:0; width:250px; box-sizing:border-box; list-style:none; border-radius:3px; border:1px solid #ccc; background:#fff; box-shadow:0px 0px 3px rgba(0,0,0,0.2); padding:5px 0px;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul > li {height:30px; display:block; padding:5px 10px; line-height:30px; font-size:14px; color:#666;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul > li.message {text-align:center;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul > li[data-role=user] {cursor:pointer;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul > li[data-role=user].selected {background:#f4f4f4; color:#222;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul > li[data-role=user]:hover {background:#f4f4f4; color:#222;}
+div[data-module=message][data-context=box] div[data-role=receiver] > div[data-role=input] > ul > li[data-role=user] > i.photo {display:inline-block; width:30px; height:30px; border-radius:50%; border:1px solid #ccc; background-image:url(../../../../member/images/nophoto.png); vertical-align:middle; box-sizing:border-box; background-size:cover; background-position:50% 50%; margin-right:10px;}
+
+div[data-module=message][data-context=box] div[data-role=posts] {width:100%; height:calc(100% - 51px); box-sizing:border-box; padding-bottom:50px;}
+div[data-module=message][data-context=box] div[data-role=posts] > div[data-role=post] {width:100%; height:100%; overflow-x:hidden; overflow-y:scroll; display:none; -webkit-overflow-scrolling:touch;}
+div[data-module=message][data-context=box] div[data-role=posts] > div[data-role=post] > div[data-role=loading] {width:100%; height:100%; position:relative;}
+div[data-module=message][data-context=box] div[data-role=posts] > div[data-role=post] > div[data-role=loading] > i {position:absolute; width:40px; height:40px; top:calc(50% - 20px); left:calc(50% - 20px); font-size:24px; color:#666; text-align:center; line-height:40px;}
+div[data-module=message][data-context=box] div[data-role=posts] > div[data-role=post] > div[data-role=item] + div[data-role=loading].next {height:100px; border-top:1px dotted #ccc;}
+div[data-module=message][data-context=box] div[data-role=posts] > div[data-role=post] > div[data-role=loading].prev {height:100px; border-bottom:1px dotted #ccc;}
+
+div[data-module=message][data-context=box] div[data-role=item] {width:100%; box-sizing:border-box; padding:10px; font-size:0;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=send] {text-align:right;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] {text-align:left;}
+div[data-module=message][data-context=box] div[data-role=item] > i.photo {width:40px; height:40px; display:block; background-size:cover; background-position:50% 50%; border-radius:50%; border:1px solid #ccc;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=send] > i.photo {float:right;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] > i.photo {float:left;}
+div[data-module=message][data-context=box] div[data-role=item] > b {display:inline-block; width:calc(100% - 45px); height:20px; line-height:20px; font-size:14px; box-sizing:border-box; padding:0px 12px;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents {display:inline-block; width:calc(100% - 45px); box-sizing:border-box; padding:0px 10px;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon {padding:2px 0px;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message {display:inline-block; width:auto; max-width:80%; border-radius:3px; padding:8px 10px; font-size:14px; position:relative; min-height:20px; line-height:20px; text-align:left;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon:first-child > div.message:before {position:absolute; content:" "; width:0; height:0;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a {display:block; width:240px; border-radius:5px; overflow:hidden; background:#fff; border:1px solid #ccc; padding:5px; font-size:0;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a.image {border:0; padding:0;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a.message {margin-bottom:5px;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a > img {width:100%;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a > i {display:inline-block; margin:5px 10px 5px 5px; width:20px; height:30px; vertical-align:middle; background-size:contain; background-repeat:no-repeat; background-position:50% 50%;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a > div {display:inline-block; width:calc(100% - 40px); height:40px; vertical-align:middle;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a > div > b {display:block; height:20px; padding-top:2px; font-size:12px; color:#222; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; line-height:20px;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.message > a > div > small {display:block; font-size:11px; color:#666; font-family:Roboto; height:14px; line-height:14px;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.info {display:inline-block; font-size:12px; vertical-align:bottom;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.info > i {display:block; font-style:normal; font-size:11px; padding-bottom:2px; color:#1498fc; font-family:Roboto; font-weight:bold;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon > div.info > time {display:none; color:#666;}
+div[data-module=message][data-context=box] div[data-role=item] > div.contents > div.balloon:last-child > div.info > time {display:block;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=send] > div.contents > div.balloon > div.message {background:#1498fc; color:#fff;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=send] > div.contents > div.balloon:first-child > div.message:before {top:6px; right:0; margin-right:-8px; border-top:8px solid #1498fc; border-right:8px solid transparent;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=send] > div.contents > div.balloon > div.info {padding-right:5px;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] > div.contents > div.balloon > div.message {background:#f2f0f0; color:#222;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] > div.contents > div.balloon:first-child > div.message:before {top:6px; left:0; margin-left:-8px; border-top:8px solid #f2f0f0; border-left:8px solid transparent;}
+div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] > div.contents > div.balloon > div.info {padding-left:5px;}
+
+div[data-module=message][data-context=box] section > div[data-role=inputbox] {position:absolute; width:100%; left:0; bottom:0; border-top:1px solid #e5e5e5; padding:5px 5px 5px 405px; box-sizing:border-box;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=progress] {position:relative; width:100%; height:0px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=progress] > div {position:absolute; top:-8px; left:-5px; width:0; height:3px; background:#2196F3; padding:0px 5px; display:none;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] {height:24px; line-height:24px; display:block; padding:0px 8px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] > label {display:inline-block; font-size:12px; max-width:100%; height:24px; line-height:24px; border:1px solid #ccc; box-sizing:border-box; border-radius:11px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; padding:0px 10px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] > label > span {float:right; font-family:Roboto; color:#666; margin-left:5px; height:24px; line-height:24px; font-size:11px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] > label > span:before {content:"(";}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] > label > span:after {content:")";}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] > label > button {float:right; width:22px; height:22px; margin-right:-5px; border:0; background:transparent; color:#F44336; cursor:pointer;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] > label > button > i {width:22px; height:22px; text-align:center; line-height:22px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file]:empty {display:none;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox].disable {background:#f4f4f4; cursor:not-allowed;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=input] {width:calc(100% - 100px); font-size:14px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=input] > textarea {border:0; min-height:40px; height:20px; line-height:20px; padding:10px;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=input] > textarea[disabled] {background:transparent;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=action] {width:70px; height:40px; position:absolute; right:1px; bottom:5px; padding-left:5px; font-size:0;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=action] > button {margin:5px 5px 5px 0px; width:30px; height:30px; box-sizing:border-box; border:0; background:transparent; cursor:pointer;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=action] > button > i {width:30px; height:30px; text-align:center; line-height:30px; font-size:16px; color:#666; box-sizing:border-box;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=action] > button[disabled] {cursor:not-allowed; opacity:0.5;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=action] > button[data-action=send] > i {background:#1498fc; color:#fff; border-radius:50%;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=action] > button[data-action=send][disabled] > i {color:rgba(255,255,255,0.7);}
+
+@media (max-width:767px) {
+	div[data-module=message][data-context=box] aside {position:absolute; top:0; left:-301px; width:300px; transition:left .2s ease-in-out; z-index:10;}
+	div[data-module=message][data-context=box] aside.opened {left:0px; box-shadow:1px 0px 3px rgba(0,0,0,0.1);}
+	div[data-module=message][data-context=box] aside > h4 > button[data-action=new] {display:none;}
+	div[data-module=message][data-context=box] aside > h4 > button[data-action=showbox] {display:block;}
+	
+	div[data-module=message][data-context=box] section {padding-left:0px;}
+	div[data-module=message][data-context=box] section > div[data-role=inputbox] {padding-left:5px;}
+	div[data-module=message][data-context=box] section > h5 > button[data-action=showbox] {display:block;}
+	div[data-module=message][data-context=box] section > h5 > button[data-action=new] {display:block;}
+	div[data-module=message][data-context=box] div[data-role=receiver] {padding-left:50px;}
+}
+
+@media (min-width:768px) and (max-width:1000px) {
+	div[data-module=message][data-context=box] aside {width:300px;}
+	div[data-module=message][data-context=box] section {padding-left:300px;}
+	div[data-module=message][data-context=box] section > div[data-role=inputbox] {padding-left:285px;}
+}
