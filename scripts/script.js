@@ -86,7 +86,7 @@ var Message = {
 				Message.box.view(box);
 			});
 			
-			setTimeout(Message.reload,60000);
+			setTimeout(Message.reload,30000);
 		}
 	},
 	/**
@@ -937,7 +937,7 @@ var Message = {
 				}
 			}
 			
-			setTimeout(Message.reload,60000);
+			setTimeout(Message.reload,30000);
 		});
 	}
 };
