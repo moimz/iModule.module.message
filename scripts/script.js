@@ -201,6 +201,13 @@ var Message = {
 				$("small",$box).append($("<label>").html(data.unread));
 				if (data.unread > 0) $("small",$box).addClass("new");
 				else $("small",$box).removeClass("new");
+				
+				if (data.file != null) {
+					if (typeof data.file == "object") {
+						$("small",$box).append($("<i>").append($("<span>").html(iModule.getFileSize(data.file.size))).append(data.file.name));
+					}
+				}
+				
 				$("small",$box).append(data.message);
 				Message.box.sort();
 				
@@ -319,6 +326,13 @@ var Message = {
 				$post.append($("<label>").html(data.unread));
 				if (data.unread > 0) $post.addClass("new");
 				else $post.removeClass("new");
+				
+				if (data.file != null) {
+					if (typeof data.file == "object") {
+						$post.append($("<i>").append($("<span>").html(iModule.getFileSize(data.file.size))).append(data.file.name));
+					}
+				}
+				
 				$post.append(data.message);
 			}
 			
@@ -720,12 +734,18 @@ var Message = {
 						Message.inputbox.file = null;
 						$("div[data-role=file]",Message.$inputbox).empty();
 						Message.inputbox.button();
+						
+						Message.$posts.css("paddingBottom",Message.$inputbox.outerHeight());
+						Message.inputbox.button();
 					});
 					$label.append($button);
 					
 					$label.append('<span>'+iModule.getFileSize(file.size)+'</span>'+file.name);
 					$("div[data-role=file]",Message.$inputbox).append($label);
 					
+					Message.inputbox.button();
+					
+					Message.$posts.css("paddingBottom",Message.$inputbox.outerHeight());
 					Message.inputbox.button();
 					
 					return;
@@ -785,7 +805,7 @@ var Message = {
 			if ($post.length != 1) return;
 			
 			var message = $textarea.val();
-			if (Message.inputbox.file == null && message.length == 0) return;
+			if (Message.inputbox.file == null && message.length == 0 && filehash == null) return;
 			
 			var box = $post.attr("data-box");
 			if (box == "new") {
@@ -834,6 +854,9 @@ var Message = {
 						
 						$textarea.val("");
 						$textarea.outerHeight(40);
+						
+						Message.$posts.css("paddingBottom",Message.$inputbox.outerHeight());
+						Message.inputbox.button();
 						
 						$("div[data-role=file]",Message.$inputbox).empty();
 					});

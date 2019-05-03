@@ -601,6 +601,13 @@ class ModuleMessage {
 		$latest = $this->db()->select($this->table->post)->where('box',$box->box)->where('midx',$midx)->where('reg_date',$box->latest)->getOne();
 		if ($latest != null) {
 			$box->message = GetString($latest->message,'replace');
+			if ($latest->file) {
+				$file = $this->getFileInfo($latest->file);
+				if ($file != null) $box->file = $file;
+				else $box->file = $latest->file;
+			} else {
+				$box->file = null;
+			}
 		} else {
 			$box->message = null;
 		}

@@ -53,12 +53,18 @@ div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-4] > i:nth-child(3) {height:50%; top:0; right:0;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > i.photo > div[data-role|=wall-4] > i:nth-child(4) {bottom:0; right:0;}
 
-div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > b {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:14px; height:25px; line-height:25px; color:#222;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > b {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:14px; height:22px; line-height:22px; color:#222;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > b > time {color:#666; float:right; font-size:12px; font-weight:normal; margin-left:10px;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small {display:block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:14px; height:18px; line-height:18px; color:#666; font-size:12px;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > label {min-width:18px; height:18px; border-radius:9px; font-family:Roboto; color:#fff; line-height:18px; float:right; background:#2196F3; padding:0px 5px; box-sizing:border-box; display:none; margin-left:5px;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small.new {color:#222 !important; font-weight:bold;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small.new > label {display:block;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > i {display:inline-block; margin-right:5px; max-width:calc(100% - 100px); height:16px; border:1px solid #ccc; padding:0px 8px 0px 5px; font-style:normal; vertical-align:middle; line-height:16px; border-radius:9px; background:#fff; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; float:left;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > i:before {content:"\e679"; font-family:XEIcon; margin-right:5px; float:left; height:16px; line-height:16px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > i > span {float:right; font-family:Roboto; font-size:11px; margin-left:5px; height:16px; line-height:18px;}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > i > span:before {content:"(";}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small > i > span:after {content:")";}
+div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box] > small:after {content:" "; display:block; clear:both;}
 div[data-module=message][data-context=box] div[data-role=boxes] > div[data-role=box].selected {background:#f4f4f4;}
 
 div[data-module=message][data-context=box] div[data-role=title] {display:none; position:absolute; top:0; left:0; width:100%; height:50px; font-size:14px; line-height:50px;}
@@ -114,7 +120,7 @@ div[data-module=message][data-context=box] div[data-role=item][data-mode=receive
 div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] > div.contents > div.balloon:first-child > div.message:before {top:6px; left:0; margin-left:-8px; border-top:8px solid #f2f0f0; border-left:8px solid transparent;}
 div[data-module=message][data-context=box] div[data-role=item][data-mode=receive] > div.contents > div.balloon > div.info {padding-left:5px;}
 
-div[data-module=message][data-context=box] section > div[data-role=inputbox] {position:absolute; width:100%; left:0; bottom:0; border-top:1px solid #e5e5e5; padding:5px 5px 5px 405px; box-sizing:border-box;}
+div[data-module=message][data-context=box] section > div[data-role=inputbox] {position:absolute; width:100%; left:0; bottom:0; border-top:1px solid #e5e5e5; padding:5px 5px 5px 405px; box-sizing:border-box; background:#fff;}
 div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=progress] {position:relative; width:100%; height:0px;}
 div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=progress] > div {position:absolute; top:-8px; left:-5px; width:0; height:3px; background:#2196F3; padding:0px 5px; display:none;}
 div[data-module=message][data-context=box] section > div[data-role=inputbox] > div[data-role=file] {height:24px; line-height:24px; display:block; padding:0px 8px;}

@@ -51,6 +51,8 @@ for ($i=0, $loop=count($lists);$i<$loop;$i++) {
 	if ($lists[$i]->file) {
 		$file = $this->getFileInfo($lists[$i]->file);
 		if ($file != null) $lists[$i]->file = $file;
+	} else {
+		$lists[$i]->file = null;
 	}
 	
 	if ($lists[$i]->is_readed == 'FALSE') $unreads[] = $lists[$i]->reg_date;
